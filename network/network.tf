@@ -13,6 +13,7 @@ resource "openstack_networking_subnet_v2" "sn_1" {
 }
 
 # Create router AND attach it to an External Network
+# Note: This 'gateway' is the UUID of the VLAN to which to connect 
 resource "openstack_networking_router_v2" "rr_1" {
   name             = "rr_1"
   #external_gateway = "ext_vlan_net"
